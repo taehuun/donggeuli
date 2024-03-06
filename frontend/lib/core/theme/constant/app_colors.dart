@@ -1,10 +1,3 @@
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
-
-class AppColors {
-  static const Color white = Color(0xFFFFFFFF);
-  static const Color black = Color(0xFF000000);
-
-  static const Color primary = Color(0xFF83D1FC);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3197c6118ad4514272a60ff773a9fdfce80facef087132bf418e3b7dfc2793c
+size 1495
