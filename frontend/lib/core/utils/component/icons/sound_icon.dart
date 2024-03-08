@@ -1,15 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/constant/app_icons.dart';
-
-class SoundIcon extends StatelessWidget {
-  const SoundIcon({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Image.asset(AppIcons.sound_icon,
-          width: MediaQuery.of(context).size.width * 0.05),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2343ad3702739aefb748e4e4d1f3f5bcafb6f9a7e45ad9cc61d1fa75b36e4725
+size 755
