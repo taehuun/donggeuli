@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5871bdaa8b0c128f00c74ae959ac5c78be06a88bdae0cba00f26547c30c6fee6
-size 400
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+
+class KakaotalkIcon extends StatelessWidget {
+  const KakaotalkIcon({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Image.asset(AppIcons.kakaotalk_icon,
+          width: MediaQuery.of(context).size.width * 0.05),
+    );
+  }
+}

@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f6cd4cf8d4c898810fb6310ede23da06a341fc2a6a995de8e4df96e0347ebcab
-size 400
+import 'operation_step.dart';
+
+class MoveTo extends OperationStep {
+  const MoveTo(this.x, this.y);
+
+  factory MoveTo.fromJson(Map<String, dynamic> data) {
+    return MoveTo(data['x'] as double, data['y'] as double);
+  }
+
+  final double x;
+  final double y;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'type': 'moveTo',
+      'x': x,
+      'y': y,
+    };
+  }
+}
