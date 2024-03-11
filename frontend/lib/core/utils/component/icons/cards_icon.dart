@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba619cc8ab28d64f220b210ee0ac7894b6b981d91872a4ff99b69f913844dcbd
-size 520
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+
+class CardsIcon extends StatelessWidget {
+  const CardsIcon({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Image.asset(AppIcons.word_icon,
+          width: MediaQuery.of(context).size.width * 0.05),
+    );
+  }
+}
