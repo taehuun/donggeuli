@@ -1,17 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/constant/app_icons.dart';
-import 'package:frontend/presentation/routes/route_path.dart';
-import 'package:go_router/go_router.dart';
-
-class EndIcon extends StatelessWidget {
-  const EndIcon({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Image.asset(AppIcons.end_icon,
-          width: MediaQuery.of(context).size.width * 0.05),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:733bab8e2ed04d42e476f9db573f84f6366bac61b6c55d5271246e1d2fbeee7a
+size 488
