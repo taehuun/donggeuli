@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ab996813f34720a6f45093db7f0f7df800246e748ff0092bcc6f4df73e42b38
-size 2563
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="backend" target="17" />
+      <module name="backend.main" target="17" />
+      <module name="backend.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
