@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3183bc825ddf6507e644fcd0c2c13b4c649381f9423fa453ec5f8d58ef852f62
-size 518
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+
+class HomeIcon extends StatelessWidget {
+  const HomeIcon({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Image.asset(AppIcons.home_icon,
+          width: MediaQuery.of(context).size.width * 0.05),
+    );
+  }
+}
