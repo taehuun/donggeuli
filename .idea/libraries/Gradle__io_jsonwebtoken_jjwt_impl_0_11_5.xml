@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:abae2ebaa396e73c49cf329ff8176c59a9a913df24176a92428d77869d8c72a6
-size 483
+<component name="libraryTable">
+  <library name="Gradle: io.jsonwebtoken:jjwt-impl:0.11.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="io.jsonwebtoken" artifactId="jjwt-impl" version="0.11.5" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt-impl/0.11.5/40a599f0e8a8e4e0701596fbb15e67bfda64fdf0/jjwt-impl-0.11.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ee2c1f60b555562ac644838328549b2ecf45f9a31035475066282545d77ab6bb
-size 485
+<component name="libraryTable">
+  <library name="Gradle: org.antlr:antlr4-runtime:4.13.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.antlr" artifactId="antlr4-runtime" version="4.13.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.13.0/5a02e48521624faaf5ff4d99afc88b01686af655/antlr4-runtime-4.13.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2de1a8631d33cf0b91569a190613496fb70ad2f4506ff2b339e99291ddb3d94a
-size 487
+<component name="libraryTable">
+  <library name="Gradle: org.aspectj:aspectjweaver:1.9.21" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.aspectj" artifactId="aspectjweaver" version="1.9.21" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.9.21/beaabaea95c7f3330f415c72ee0ffe79b51d172f/aspectjweaver-1.9.21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:190c451ef1c7374941c027c12876c7d8ad274fc1a523c98a5e408b9d7bb63f9a
-size 497
+<component name="libraryTable">
+  <library name="Gradle: org.mapstruct:mapstruct:1.5.5.Final" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.mapstruct" artifactId="mapstruct" version="1.5.5.Final" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct/1.5.5.Final/2ca3cbe39b6e9ea8d5ea521965a89bef2a1e8eeb/mapstruct-1.5.5.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

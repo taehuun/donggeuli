@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:395a46a7152b445e663345e5e47a6a0e1d3a373bf4a21cdedb6789f62e3ccce6
-size 459
+<component name="libraryTable">
+  <library name="Gradle: org.eclipse.jdt:ecj:3.26.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.eclipse.jdt" artifactId="ecj" version="3.26.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.26.0/4837be609a3368a0f7e7cf0dc1bdbc7fe94993de/ecj-3.26.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

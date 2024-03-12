@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bc840de7e2bc505307fe3f35facdba1d6eccce2cbc746132373feef52637960
-size 466
+<component name="libraryTable">
+  <library name="Gradle: javax.inject:javax.inject:1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="javax.inject" artifactId="javax.inject" version="1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

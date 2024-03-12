@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7b8f3524a5ab5e68fa6a021f9c6bc13788700b4e16022a857f89d880e49bb2a
-size 465
+<component name="libraryTable">
+  <library name="Gradle: org.objenesis:objenesis:3.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.objenesis" artifactId="objenesis" version="3.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

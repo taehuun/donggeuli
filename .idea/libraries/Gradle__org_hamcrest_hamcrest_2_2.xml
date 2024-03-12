@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:385a0ffc7c74ed13f9bd440fab73f94422486bd55d0857ffd7ae0463ef9b5a61
-size 458
+<component name="libraryTable">
+  <library name="Gradle: org.hamcrest:hamcrest:2.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.hamcrest" artifactId="hamcrest" version="2.2" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
