@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f01d17d286dad91e4ee1c1169037a5d067646aefdecabf7f324408e0b6e33c3
-size 488
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/custom/custom_font_style.dart';
+
+class MyReview extends StatelessWidget {
+  const MyReview({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.01),
+      child: Text(
+        "내가 남긴 리뷰",
+        style: CustomFontStyle.getTextStyle(context, CustomFontStyle.textMedium),
+      ),
+    );
+  }
+}
