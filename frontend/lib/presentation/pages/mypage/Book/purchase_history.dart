@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5c8e6631da0768685c0a972805e9ce171b977716a64aca6e3736da15a0614e00
-size 360
+import 'package:flutter/material.dart';
+
+class PurchaseHistory extends StatefulWidget {
+  const PurchaseHistory({super.key});
+
+  @override
+  State<PurchaseHistory> createState() => _PurchaseHistoryState();
+}
+
+class _PurchaseHistoryState extends State<PurchaseHistory> {
+  @override
+  Widget build(BuildContext context) {
+    return Text("구매내역");
+  }
+}

@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:77cc1e34b806c94186bcc880c38c6ca8c3b3db859a79fbaaf252f8cfcb502165
-size 289
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:frontend/presentation/provider/user_provider.dart';
+import 'package:http/http.dart' as http;
+
+class ReviewModel extends ChangeNotifier {
+  final UserProvider userProvider;
+
+  ReviewModel(this.userProvider);
+
+}
