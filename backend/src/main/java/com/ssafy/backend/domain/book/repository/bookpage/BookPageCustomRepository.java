@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3dbedf1fc7d113c1373718d48d0b556f63706bf74d090149e3595e5f531e9783
-size 497
+package com.ssafy.backend.domain.book.repository.bookpage;
+
+import com.ssafy.backend.domain.book.entity.BookPage;
+import com.ssafy.backend.domain.book.entity.BookPageSentence;
+import com.ssafy.backend.domain.education.entity.Education;
+
+import java.util.List;
+
+public interface BookPageCustomRepository {
+
+    BookPage findByBookPage(Long bookId, int bookPage);
+
+    List<BookPageSentence> findByBookPageId(Long bookPageId);
+
+    Education findByBookSentenceId(List<Long> bookPageSentenceId);
+
+
+}
