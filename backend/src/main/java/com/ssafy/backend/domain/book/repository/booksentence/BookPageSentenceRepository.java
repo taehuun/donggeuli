@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5bcbbcedf03a73a1582ffb492c54061359836ac8668e34cf3cb9bdaa29a5b410
-size 362
+package com.ssafy.backend.domain.book.repository.booksentence;
+
+import com.ssafy.backend.domain.book.entity.BookPage;
+import com.ssafy.backend.domain.book.entity.BookPageSentence;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface BookPageSentenceRepository extends JpaRepository<BookPageSentence, Long> {
+
+}
