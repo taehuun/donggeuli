@@ -1,20 +1,3 @@
-package com.ssafy.backend.domain.book.dto;
-
-import com.ssafy.backend.domain.book.dto.response.BookReviewResponseDto;
-import lombok.Builder;
-
-import java.util.List;
-
-@Builder
-public record BookDto(
-        Long bookId,
-        String title,
-        String summary,
-        String coverPath,
-        int price,
-        boolean isPay,
-        List<BookReviewResponseDto> bookReviews
-)
-{
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ed222a38585498e59347544b0678969d370ca371c2b2cdf32f2440f9f2a6c0d
+size 634
