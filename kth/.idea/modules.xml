@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1c58bffd0455be5d88e8d8e47167e150a0bb4503dab7948ffb71e5c20b5f9a85
-size 256
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ai.iml" filepath="$PROJECT_DIR$/.idea/ai.iml" />
+    </modules>
+  </component>
+</project>
