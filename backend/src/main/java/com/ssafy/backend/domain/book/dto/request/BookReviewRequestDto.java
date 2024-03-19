@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fc82c32432f3834aa345863f8360e7f5b13d0274af2c063493df66d87c61b940
-size 343
+package com.ssafy.backend.domain.book.dto.request;
+
+import jakarta.validation.constraints.DecimalMax;
+import jakarta.validation.constraints.DecimalMin;
+import lombok.Builder;
+
+@Builder
+public record BookReviewRequestDto(
+
+        @DecimalMin(value = "0.0")
+        @DecimalMax(value = "5.0")
+        double score,
+        String content
+) {
+}

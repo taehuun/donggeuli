@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0573d7e2bcb4d89fb06a4b1a92a0dcbbaacc1b5015121a64a5a08c71cc1c1471
-size 460
+package com.ssafy.backend.domain.education.mapper;
+
+import com.ssafy.backend.domain.education.dto.EducationDto;
+import com.ssafy.backend.domain.education.entity.Education;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper(componentModel = "spring")
+public interface EducationMapper {
+    @Mapping(source = "education.bookPageSentence.bookPageSentenceId", target = "bookPageSentenceId")
+    EducationDto toEducationDto(Education education);
+}
