@@ -1,15 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/constant/app_icons.dart';
-
-class TestIcon extends StatelessWidget {
-  const TestIcon({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Image.asset(AppIcons.test_icon,
-          width: MediaQuery.of(context).size.width * 0.05),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75964e1b7a0fd0be240812d7e94abe6967de066d996bc8ba62fe7eef3ff3611b
+size 522
