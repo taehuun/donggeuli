@@ -1,10 +1,3 @@
-package com.ssafy.backend.domain.book.dto.response;
-
-import lombok.Builder;
-
-@Builder
-public record BookReviewResponseDto(
-        int score,
-        String content
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:541ad6e905df95fee09cea0495690bfe1087005f23485d196168b403a3b0b1dd
+size 171
