@@ -1,11 +1,3 @@
-package com.ssafy.backend.domain.quiz.service;
-
-import com.ssafy.backend.domain.quiz.dto.response.QuizResponseDto;
-import com.ssafy.backend.domain.quiz.entity.WordQuiz;
-
-import java.util.List;
-
-public interface QuizService {
-
-    List<QuizResponseDto> getQuiz(WordQuiz.Theme theme, Long bookId, Long userId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f08824659c90bcb1c0ef383db594abb2058605195028ca86e8c0dbf1b5ad78ac
+size 308

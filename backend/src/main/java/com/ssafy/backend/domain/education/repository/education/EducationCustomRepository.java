@@ -1,12 +1,3 @@
-package com.ssafy.backend.domain.education.repository.education;
-
-import com.ssafy.backend.domain.education.dto.UserEducationDto;
-import com.ssafy.backend.domain.education.dto.response.EducationResponseDto;
-
-import java.util.List;
-
-public interface EducationCustomRepository {
-    List<UserEducationDto> findEducationByUser(Long userId);
-
-    EducationResponseDto getEducationDetails(Long educationId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:03a237539a5cce387d83327d842272909485880c5372b336c2e0b03031856b4c
+size 399

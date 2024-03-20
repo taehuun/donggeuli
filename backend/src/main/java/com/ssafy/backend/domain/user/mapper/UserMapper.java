@@ -1,11 +1,3 @@
-package com.ssafy.backend.domain.user.mapper;
-
-
-import com.ssafy.backend.domain.user.dto.request.SignupRequestDto;
-import com.ssafy.backend.domain.user.entity.User;
-import org.mapstruct.Mapper;
-
-@Mapper(componentModel = "spring")
-public interface UserMapper {
-    User toUser(SignupRequestDto signupRequestDto);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f3233dddedb2632cef9f2c94191c017a900682ffba7bb88848dc1b2a845053d
+size 311
