@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4075c1afd4587334309ebf5b0948f91d64cec668142ec9c3e674966f0b1ead3e
-size 520
+package com.ssafy.backend.global.config;
+
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class QueryDslConfig {
+
+	@PersistenceContext
+	private EntityManager entityManager;
+
+	@Bean
+	public JPAQueryFactory jpaQueryFactory() {
+		return new JPAQueryFactory(entityManager);
+	}
+
+}
