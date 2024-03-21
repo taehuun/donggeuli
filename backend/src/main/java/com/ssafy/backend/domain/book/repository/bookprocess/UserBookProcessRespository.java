@@ -1,13 +1,3 @@
-package com.ssafy.backend.domain.book.repository.bookprocess;
-
-import com.ssafy.backend.domain.book.entity.UserBookProcess;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-import java.util.Optional;
-
-public interface UserBookProcessRespository extends JpaRepository<UserBookProcess, Long>, UserBookProcessCustomRepository{
-    Optional<UserBookProcess> findByUser_userIdAndBook_bookId(Long userId, Long bookId);
-    List<UserBookProcess> findByUser_userId(Long userId);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da820542db0ee3512a2e3d876e0ff8dd8d12d7a2bda2e8ea5fb5bb776094c28f
+size 573
