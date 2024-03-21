@@ -1,17 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/custom/custom_font_style.dart';
-
-class MyReview extends StatelessWidget {
-  const MyReview({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.01),
-      child: Text(
-        "내가 남긴 리뷰",
-        style: CustomFontStyle.getTextStyle(context, CustomFontStyle.textMedium),
-      ),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8c5bd00f3b429c74cdde041f6d1f2ca0b23df7d9588999fffb25de09ccce288a
+size 1433
