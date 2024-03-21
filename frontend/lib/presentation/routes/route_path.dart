@@ -1,20 +1,3 @@
-class RoutePath {
-  /// main_screen
-  static const String main = '/main/:id';
-  static const String main0 = '/main/0';
-  static const String main1 = '/main/1';
-  static const String main2 = '/main/2';
-  static const String main3 = '/main/3';
-
-  /// splash_page
-  static const String splash = '/splash';
-
-  /// login_page
-  static const String login = '/login';
-
-  ///my_page
-  static const String myPage = '/mypage';
-
-  static const String aiTest = '/aitest';
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:789b2afe0f456bec7b9d8a5cb073cf24c1edabcb72e3bd4d7135c565cc42e3ff
+size 527
