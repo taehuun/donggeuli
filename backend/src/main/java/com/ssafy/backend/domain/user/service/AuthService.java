@@ -1,17 +1,3 @@
-package com.ssafy.backend.domain.user.service;
-
-import com.ssafy.backend.domain.user.dto.request.SignupRequestDto;
-import com.ssafy.backend.global.jwt.dto.TokenDto;
-import com.ssafy.backend.global.jwt.dto.UserInfoDto;
-
-public interface AuthService {
-
-	void signup(SignupRequestDto signupRequestDto);
-
-	UserInfoDto login(String email, String password);
-
-	TokenDto reissue(String refreshToken);
-
-	boolean duplicateCheckEmail(String email);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e16346dd1175b5db519ef23d83c3e2478ab78a2d26c1ad6b1f8e57f87558714
+size 517
