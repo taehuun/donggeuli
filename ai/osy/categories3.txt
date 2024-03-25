@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:762cba53c17028398860b67da97fe0547b34e9b5b93a21901a93052a9e273538
-size 110
+airplane
+alarm_clock
+apple
+axe
+baseball
+cake
+circle
+cookie
+face
+hurricane
+pickup_truck
+pig
+potato
+soccer_ball
