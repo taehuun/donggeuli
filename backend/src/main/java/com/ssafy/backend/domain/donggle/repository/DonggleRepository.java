@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5d0adee4c55b91f271dd0476717e6642c74238bbe91b0cfbc96b2989ce4ca844
-size 342
+package com.ssafy.backend.domain.donggle.repository;
+
+import com.ssafy.backend.domain.donggle.entity.Donggle;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+
+public interface DonggleRepository extends JpaRepository<Donggle, Long> {
+	Optional<Donggle> findBySituation(Donggle.Situation situation);
+
+}

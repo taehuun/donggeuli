@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5fb7526f8faee57db2bccb65e8a64141cc90ff0d98c8ed7b1756bf21cf5f845
-size 462
+package com.ssafy.backend.domain.quiz.repository;
+
+import com.ssafy.backend.domain.quiz.entity.WordQuiz;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface WordQuizRepository extends JpaRepository<WordQuiz, Long>, QuizCustomRepository {
+	List<WordQuiz> findAllByThemeAndBook_bookId(WordQuiz.Theme theme, Long bookId);
+}

@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5b40a2e0705235593f29eabeb028cf461ff689feb65b15d7ed4adcb00a3487b9
-size 500
+package com.ssafy.backend.domain.approval.repository;
+
+import com.ssafy.backend.domain.approval.entity.Approval;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface ApprovalRepository extends JpaRepository<Approval, Long> {
+    List<Approval> findByUser_userId(Long userId);
+    Optional<Approval> findByUser_userIdAndBook_bookId(Long userId, Long bookId);
+}

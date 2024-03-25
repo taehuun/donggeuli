@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fd318cc2d39622465aa778a477e7f7e0c22289ea3a35845707f39d2ec55453f
-size 270
+package com.ssafy.backend.domain.approval.dto;
+
+import com.ssafy.backend.domain.book.entity.Book;
+import com.ssafy.backend.domain.user.entity.User;
+import lombok.Builder;
+
+@Builder
+public record ApprovalDto(
+        int price,
+        User user,
+        Book book
+) {
+}

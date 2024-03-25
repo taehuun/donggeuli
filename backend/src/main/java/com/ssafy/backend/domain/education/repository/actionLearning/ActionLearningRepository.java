@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7f5ba99dc26374e3162ab194e69553b403dc34806a0932739d36819109859371
-size 321
+package com.ssafy.backend.domain.education.repository.actionLearning;
+
+import com.ssafy.backend.domain.education.entity.ActionLearning;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ActionLearningRepository extends JpaRepository<ActionLearning, Long>, ActionLearningCustomRepository {
+}

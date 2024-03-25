@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:94569525e36c2a66350616b775c800ce52d0ad86a451fb83ad931e6c640b4f48
-size 338
+package com.ssafy.backend.domain.donggle.mapper;
+
+import com.ssafy.backend.domain.donggle.dto.response.DonggleResponseDto;
+import com.ssafy.backend.domain.donggle.entity.Donggle;
+import org.mapstruct.Mapper;
+
+@Mapper(componentModel = "spring")
+public interface DonggleMapper {
+	DonggleResponseDto toDonggleResponseDto(Donggle donggle);
+}
