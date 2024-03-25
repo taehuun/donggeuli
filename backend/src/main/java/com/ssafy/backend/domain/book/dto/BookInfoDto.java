@@ -1,16 +1,3 @@
-package com.ssafy.backend.domain.book.dto;
-
-import com.ssafy.backend.domain.education.dto.EducationDto;
-import lombok.Builder;
-
-import java.util.List;
-
-@Builder
-public record BookInfoDto(
-        Long bookId,
-        String title,
-        String coverImagePath,
-        int page,
-        List<EducationDto> educations
-) {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a48de7893202ce3593b71ec20c49eb2e7b0a8a354a2cb69d3cbc4bffce08155f
+size 331
