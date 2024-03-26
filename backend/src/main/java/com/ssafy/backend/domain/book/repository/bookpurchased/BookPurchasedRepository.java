@@ -1,12 +1,3 @@
-package com.ssafy.backend.domain.book.repository.bookpurchased;
-
-import com.ssafy.backend.domain.book.entity.BookPurchasedLearning;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface BookPurchasedRepository extends JpaRepository<BookPurchasedLearning, Long>, BookPurchasedCustomRepository {
-    Optional<BookPurchasedLearning> findByBook_bookId(Long bookId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:052a4f684e4a7dad4d3611ea2c9dc53fafea998dcbd3f7459f178e8fa6453315
+size 575
