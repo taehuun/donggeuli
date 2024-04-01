@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83431d91ce6b789142dc072dfa87dc2a632d93a97abc4c468667094a5ee7214f
-size 266
+package com.ssafy.backend.domain.book.dto.response;
+
+import lombok.Builder;
+
+@Builder
+public record BookPurchasedResponseDto(
+        Long bookId,
+        String title,
+        String coverPath,
+        int price,
+        boolean isPay,
+        boolean isRead
+) {
+}
