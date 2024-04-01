@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9391227a3b01b374033363967f44d9013104ede81e71c847b4198f3641a7337
-size 423
+package com.ssafy.backend.domain.book.dto.response;
+
+import com.ssafy.backend.domain.education.dto.BookEducationDto;
+import lombok.Builder;
+
+import java.util.List;
+
+@Builder
+public record BookInfoResponseDto(
+        Long bookId,
+        String title,
+        String coverImagePath,
+        int totalPage,
+        int processPage,
+        List<String> bookPageImagePath,
+        List<BookEducationDto> educationList
+
+) {
+}
