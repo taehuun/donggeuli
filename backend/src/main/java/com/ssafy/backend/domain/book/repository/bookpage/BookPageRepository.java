@@ -1,10 +1,3 @@
-package com.ssafy.backend.domain.book.repository.bookpage;
-
-import com.ssafy.backend.domain.book.entity.BookPage;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface BookPageRepository extends JpaRepository<BookPage, Long>, BookPageCustomRepository {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bd34d185450db533e83363aefac14731e7644f12bec50e2ad1c49172d010113
+size 344
