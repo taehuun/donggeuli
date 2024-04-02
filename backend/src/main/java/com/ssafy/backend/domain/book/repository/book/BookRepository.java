@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c0b6c2c1c04682c50c706d01d70c7676984526d6b81e8bdb33ab12d72ac3c6dd
-size 448
+package com.ssafy.backend.domain.book.repository.book;
+
+import com.ssafy.backend.domain.book.entity.Book;
+import com.ssafy.backend.domain.book.mapper.CoverPathMapping;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface BookRepository extends JpaRepository<Book, Long>, BookCustomRepository{
+    List<CoverPathMapping> findAllBy();
+}

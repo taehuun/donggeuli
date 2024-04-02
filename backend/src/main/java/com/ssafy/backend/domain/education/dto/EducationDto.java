@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb8341add5946d929910dae2bad1f85f32794d9cf8d65aed84b9fa93f406473f
-size 310
+package com.ssafy.backend.domain.education.dto;
+
+import com.ssafy.backend.domain.education.entity.Education;
+
+public record EducationDto(
+		Long educationId,
+		Education.Gubun gubun,
+		Education.Category category,
+		String wordName,
+		String imagePath,
+		String traceImagePath,
+		Long bookPageSentenceId
+) {
+}
