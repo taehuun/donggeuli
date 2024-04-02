@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f377c9d10b2b02474e7aa1e73eb358d6b00c01d3b7aa0651f87c0687001fcb0
-size 250
+package com.ssafy.backend.domain.book.repository.book;
+
+import com.ssafy.backend.domain.book.dto.BookDto;
+
+import java.util.Optional;
+
+public interface BookCustomRepository {
+    Optional<BookDto> purchasedBookInfo(Long bookId, Long loginUSerId);
+
+}
