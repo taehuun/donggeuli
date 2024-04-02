@@ -1,15 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/custom/custom_font_style.dart';
-
-class LoadingScreen extends StatelessWidget {
-  const LoadingScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTextStyle(
-        style: CustomFontStyle.getTextStyle(context, CustomFontStyle.unSelectedLarge),
-        child: const Text(
-          "Loading...",
-        ));
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cfc5c9c9b44f996bc22fb5640e3a573cdea4d57a39b6167c262446edcfd8dd2
+size 22549
