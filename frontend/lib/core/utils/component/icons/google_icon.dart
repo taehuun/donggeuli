@@ -1,15 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/constant/app_icons.dart';
-
-class GoogleIcon extends StatelessWidget {
-  const GoogleIcon({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {},
-      child: Image.asset(AppIcons.google_icon,
-          width: MediaQuery.of(context).size.width * 0.05),
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:af5418a844759fd63a2341ea3bdfc3377ba5f810c2ebe2c27d03b2ce1ac3465e
+size 391

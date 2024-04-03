@@ -1,19 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:frontend/core/theme/constant/app_icons.dart';
-
-class CardsIconMain extends StatelessWidget {
-  final double? size;
-
-  const CardsIconMain({super.key, this.size});
-
-  @override
-  Widget build(BuildContext context) {
-    double _size = size ?? MediaQuery.of(context).size.width * 0.05;
-
-    return Image.asset(
-      AppIcons.word_icon,
-      width: _size,
-      height: _size,
-    );
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7939e56f6ca19cd2a7b01aeff50f080d4725c3bce4562257690881321a8770a5
+size 445

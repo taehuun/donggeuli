@@ -1,14 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:just_audio/just_audio.dart';
-
-AudioPlayer effectPlayer = AudioPlayer();
-
-Future<void> effectPlaySound(String path, double volume) async {
-  try {
-    await effectPlayer.setAsset(path); // 오디오 파일의 URL을 설정
-    await effectPlayer.setVolume(volume);
-    await effectPlayer.play(); // 오디오 재생 시작
-  } catch (e) {
-    debugPrint("오류 발생: $e");
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:17ddee3f3340510ed6bbe5a500b8ec59d128e068acae7cfcae951020927827b6
+size 437
