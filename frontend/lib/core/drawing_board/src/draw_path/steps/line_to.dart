@@ -1,24 +1,3 @@
-import 'operation_step.dart';
-
-class LineTo extends OperationStep {
-  LineTo(this.x, this.y);
-
-  factory LineTo.fromJson(Map<String, dynamic> data) {
-    return LineTo(
-      data['x'] as double,
-      data['y'] as double,
-    );
-  }
-
-  final double x;
-  final double y;
-
-  @override
-  Map<String, dynamic> toJson() {
-    return <String, dynamic>{
-      'type': 'lineTo',
-      'x': x,
-      'y': y,
-    };
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88cd1ea646042d9952f3159424809c00a552ad9f3b2c06f13499db26e6ed1128
+size 413

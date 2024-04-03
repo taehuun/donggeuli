@@ -1,8 +1,3 @@
-export 'src/paint_extension/ex_color.dart';
-export 'src/paint_extension/ex_color_filter.dart';
-export 'src/paint_extension/ex_image_filter.dart';
-export 'src/paint_extension/ex_mask_filter.dart';
-export 'src/paint_extension/ex_offset.dart';
-export 'src/paint_extension/ex_paint.dart';
-export 'src/paint_extension/ex_radius.dart';
-export 'src/paint_extension/ex_rect.dart';
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb6d5bdb25b22b467732bab63f58fe27c1f49930b6badf92ac5807110fde6253
+size 373

@@ -1,26 +1,3 @@
-import 'dart:ui';
-
-import 'paint_content.dart';
-
-class EmptyContent extends PaintContent {
-  EmptyContent();
-
-  factory EmptyContent.fromJson(Map<String, dynamic> _) => EmptyContent();
-
-  @override
-  PaintContent copy() => EmptyContent();
-
-  @override
-  void draw(Canvas canvas, Size size, bool deeper) {}
-
-  @override
-  void drawing(Offset nowPoint) {}
-
-  @override
-  void startDraw(Offset startPoint) {}
-
-  @override
-  Map<String, dynamic> toContentJson() {
-    return <String, dynamic>{};
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27a64dbc32fe27657e4da08499871492667b9241d9e2c19a7f20734ad320a035
+size 498

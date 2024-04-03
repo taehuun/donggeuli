@@ -1,16 +1,3 @@
-// path.close();
-
-import 'operation_step.dart';
-
-class PathClose extends OperationStep {
-  PathClose();
-
-  factory PathClose.fromJson(Map<String, dynamic> _) {
-    return PathClose();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return <String, dynamic>{'type': 'close'};
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:22e9958206401701c2699dc6926fd6de312125c0bf10a5d7732215faa9714656
+size 288
