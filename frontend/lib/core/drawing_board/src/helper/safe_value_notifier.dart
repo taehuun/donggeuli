@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:45226d58780a0a4e0b7e769ae586a3c9f2c70a0e2b087d2085bfa22af0c7e0cd
-size 364
+import 'package:flutter/material.dart';
+
+/// ValueNotifier安全扩展
+class SafeValueNotifier<T> extends ValueNotifier<T> {
+  SafeValueNotifier(super.value);
+
+  bool _mounted = true;
+
+  @override
+  set value(T newValue) {
+    if (_mounted) {
+      super.value = newValue;
+    }
+  }
+
+  @override
+  void dispose() {
+    _mounted = false;
+    super.dispose();
+  }
+}
