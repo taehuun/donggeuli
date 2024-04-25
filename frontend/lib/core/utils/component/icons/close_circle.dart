@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2d26ff409be6f0d0bb83b7983788704b6b946bae1ddbea1d033220f6e2ab683d
-size 443
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+
+class CloseCircle extends StatelessWidget {
+  final double? size;
+
+  const CloseCircle({super.key, this.size});
+
+  @override
+  Widget build(BuildContext context) {
+    double _size = size ?? MediaQuery.of(context).size.width * 0.05;
+
+    return Image.asset(
+      AppIcons.close_circle,
+      width: _size,
+      height: _size,
+    );
+  }
+}
