@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:55b1090da2f3842fca00106293a582d6903fdc3e7d8628c77678d5bfdb951851
-size 906
+package com.ssafy.backend.domain.education.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.ssafy.backend.domain.book.entity.BookPageSentence;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@ToString
+@NoArgsConstructor
+public class Education {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long educationId;
+
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false)
+	private Gubun gubun;
+
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = true)
+	private Category category;
+
+	private String wordName;
+
+	private String imagePath;
+
+	private String traceImagePath;
+
+	@JsonIgnore
+	@OneToOne
+	@JoinColumn(name = "book_page_sentence_id")
+	private BookPageSentence bookPageSentence;
+
+
+	public enum Gubun {
+		WORD,
+		NOWORD
+	}
+
+	public enum Category {
+		PICTURE,
+		ACTION,
+		EXPRESSION
+	}
+}

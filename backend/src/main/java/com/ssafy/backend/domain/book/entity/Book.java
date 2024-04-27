@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc8af7c46311ef5b8071c6dfa319c437b54a6d36eb61624e7eccda8815f45961
-size 631
+package com.ssafy.backend.domain.book.entity;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter
+@ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long bookId;
+
+    @Column(nullable = false)
+    private String title;
+
+    private String summary;
+
+    @Column(nullable = false)
+    private String coverPath;
+
+    @Column(nullable = false)
+    private int price;
+
+    @OneToMany(mappedBy = "book")
+    private List<BookPage> bookPageList = new ArrayList<>();
+
+}

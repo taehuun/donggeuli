@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:87f35eadf0cb0cf353b5ec498eedbe647e212355c42d2dbdce572b50fef37fc9
-size 618
+package com.ssafy.backend.global.jwt.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ssafy.backend.domain.user.entity.User;
+import lombok.*;
+
+@Builder
+public record UserInfoDto(
+
+		@JsonProperty("user_id")
+		Long userId,
+
+		String email,
+		String role,
+		String nickname,
+
+		@JsonProperty("profile_image")
+		String profileImage
+) {
+	public static UserInfoDto from(User user) {
+		return UserInfoDto.builder()
+				.userId(user.getUserId())
+				.email(user.getEmail())
+				.nickname(user.getNickname())
+				.profileImage(user.getProfileImage())
+				.role(user.getRole().name())
+				.build();
+	}
+
+}

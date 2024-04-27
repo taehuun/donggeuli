@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e44585f6bddbfd4162eb64c8f7cad3c416a024cd5a76e9c52219212398217513
-size 893
+import 'dart:ui';
+
+import '../../paint_extension/ex_rect.dart';
+
+import 'operation_step.dart';
+
+class ArcTo extends OperationStep {
+  ArcTo({
+    required this.rect,
+    required this.startAngle,
+    required this.sweepAngle,
+    required this.forceMoveTo,
+  });
+
+  factory ArcTo.fromJson(Map<String, dynamic> data) {
+    return ArcTo(
+      rect: jsonToRect(data['rect'] as Map<String, dynamic>),
+      startAngle: data['startAngle'] as double,
+      sweepAngle: data['sweepAngle'] as double,
+      forceMoveTo: data['forceMoveTo'] as bool,
+    );
+  }
+
+  final Rect rect;
+  final double startAngle;
+  final double sweepAngle;
+  final bool forceMoveTo;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'type': 'arcTo',
+      'rect': rect.toJson(),
+      'startAngle': startAngle,
+      'sweepAngle': sweepAngle,
+      'forceMoveTo': forceMoveTo,
+    };
+  }
+}

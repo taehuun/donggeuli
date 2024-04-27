@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a17103d9e6412ef07f56407402ba365940fd7fe61694cb1199dc6ef63b6815ba
-size 1564
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+import 'package:indexed/indexed.dart';
+
+class BackGroundBelow extends StatelessWidget {
+  const BackGroundBelow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(AppIcons.background),
+        ),
+      ),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Colors.transparent,
+        body: Indexer(
+          children: <Widget>[
+            Indexed(
+              index: -5,
+              child: Scaffold(
+                resizeToAvoidBottomInset: false,
+                body: Center(
+                  child: Image.asset(
+                    AppIcons.parchment,
+                    width: MediaQuery.of(context).size.width * 0.95,
+                  ),
+                ),
+                backgroundColor: Colors.transparent,
+              ),
+            ),
+            Indexed(
+              index: -4,
+              child: Positioned(
+                left: MediaQuery.of(context).size.width * 0.35,
+                child: Container(
+                  color: Colors.transparent,
+                  child: Center(
+                    child: Image.asset(AppIcons.bottle,
+                        width: MediaQuery.of(context).size.width * 0.3),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

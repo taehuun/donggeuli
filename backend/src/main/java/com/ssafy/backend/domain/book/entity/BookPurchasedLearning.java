@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cf4e2e0c715e247aa49d146aa73a9cdfb31a6ae2e75610e1a9a0a4b4979a953a
-size 636
+package com.ssafy.backend.domain.book.entity;
+
+import com.ssafy.backend.domain.user.entity.User;
+import jakarta.persistence.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Getter
+@ToString
+@NoArgsConstructor
+@IdClass(ProgressBookId.class)
+public class BookPurchasedLearning {
+
+    @Id
+    @JoinColumn(name = "user_id")
+    @ManyToOne
+    private User user;
+
+    @Id
+    @JoinColumn(name = "book_id")
+    @ManyToOne
+    private Book book;
+
+    @Builder
+    public BookPurchasedLearning(User user, Book book) {
+        this.user = user;
+        this.book = book;
+    }
+}

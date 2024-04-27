@@ -1,3 +1,37 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0cc61714873ca8aa49fe533eeb72bc4f397e28bb77cdc49193b3f9d5f1739408
-size 1102
+
+import 'package:flutter/material.dart';
+import 'package:frontend/core/utils/component/icons/sound_off_icon.dart';
+import 'package:frontend/core/utils/component/icons/sound_on_icon.dart';
+import 'package:frontend/presentation/provider/main_provider.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:provider/provider.dart';
+
+class SoundIcon extends StatefulWidget {
+  final AudioPlayer player;
+
+  const SoundIcon(this.player, {super.key});
+
+  @override
+  State<SoundIcon> createState() => _SoundIconState();
+}
+
+class _SoundIconState extends State<SoundIcon> {
+
+  late MainProvider mainProvider = Provider.of<MainProvider>(context, listen: false);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return GestureDetector(
+      onTap: () {
+        widget.player.playing ? widget.player.pause() : widget.player.play();
+        setState(() {
+          // Toggle the sound state
+          mainProvider.soundToggle();
+          // isSoundOn = !widget.player.playing;
+        });
+      },
+      child: widget.player.playing ? const SoundOnIcon() : const SoundOffIcon(),
+    );
+  }
+}

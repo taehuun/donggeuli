@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0ced18156e12c02bbe991f91351272a423985cba2cc5e93e69740657bdbc5a9
-size 1114
+# This file tracks properties of this Flutter project.
+# Used by Flutter tool to assess capabilities and perform upgrades etc.
+#
+# This file should be version controlled and should not be manually edited.
+
+version:
+  revision: "abb292a07e20d696c4568099f918f6c5f330e6b0"
+  channel: "stable"
+
+project_type: app
+
+# Tracks metadata for the flutter migrate command
+migration:
+  platforms:
+    - platform: root
+      create_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+      base_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+    - platform: android
+      create_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+      base_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+    - platform: ios
+      create_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+      base_revision: abb292a07e20d696c4568099f918f6c5f330e6b0
+
+  # User provided section
+
+  # List of Local paths (relative to this file) that should be
+  # ignored by the migrate tool.
+  #
+  # Files that are not part of the templates will be ignored by default.
+  unmanaged_files:
+    - 'lib/main.dart'
+    - 'ios/Runner.xcodeproj/project.pbxproj'

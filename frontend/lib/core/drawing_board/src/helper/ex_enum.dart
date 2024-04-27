@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4dd623bf30bf564444d906655ee2db0d41b5a5bc71f937d585037287773875ac
-size 593
+/// enum解析工具
+/// tools of convert enum
+class ExEnum {
+  const ExEnum._();
+
+  static bool _isEnum<T>(Object item) {
+    final List<String> splitItem = item.toString().split('.');
+    return splitItem.length > 1 && splitItem[0] == T.toString();
+  }
+
+  static T? tryParse<T extends Object>(List<T> values, String? item) {
+    if (item == null) {
+      return null;
+    }
+    if (!_isEnum<T>(item)) {
+      throw Exception('Item $item is not $T');
+    }
+
+    for (final T value in values) {
+      if (value.toString() == item) {
+        return value;
+      }
+    }
+
+    return null;
+  }
+}

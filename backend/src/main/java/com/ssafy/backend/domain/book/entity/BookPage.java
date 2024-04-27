@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6e85265206e53df87a14becaf416be957763d7da8189f8b899007282de793a06
-size 821
+package com.ssafy.backend.domain.book.entity;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Entity
+@Getter
+@ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class BookPage {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long bookPageId;
+
+    @Column(nullable = false)
+    private String bookImagePath;
+
+    @Column(nullable = false)
+    private int page;
+
+    private String content;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "book_id")
+    private Book book;
+
+    @OneToMany(mappedBy = "bookPage", fetch = FetchType.LAZY)
+    private List<BookPageSentence> bookPageSentenceList = new ArrayList<>();
+
+}

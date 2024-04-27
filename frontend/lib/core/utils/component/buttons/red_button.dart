@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:242dc6e8d7c1b746a9a1ad201298b60a4c47e75908df64bd5a73617bdd6f7720
-size 910
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_colors.dart';
+import 'package:frontend/core/theme/custom/custom_font_style.dart';
+
+class RedButton extends StatelessWidget {
+  final String textContent;
+  final VoidCallback onPressed;
+  final TextStyle? textStyle;
+
+  const RedButton(this.textContent, {super.key, required this.onPressed, this.textStyle});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        textStyle: textStyle ?? CustomFontStyle.getTextStyle(context, CustomFontStyle.textMedium),
+        backgroundColor: AppColors.error,
+        shadowColor: AppColors.black,
+        elevation: 10,
+      ),
+      child: Text(
+        textContent,
+        style: textStyle ?? CustomFontStyle.getTextStyle(context, CustomFontStyle.textMedium),
+      ),
+    );
+  }
+}

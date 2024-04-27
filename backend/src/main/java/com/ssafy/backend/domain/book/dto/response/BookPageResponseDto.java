@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31aa6a06f936c7f8168e6d543acc3ca847b8563ef6cc60e29a58b64f55a52999
-size 525
+package com.ssafy.backend.domain.book.dto.response;
+
+import com.ssafy.backend.domain.book.dto.BookPageSentenceDto;
+import com.ssafy.backend.domain.education.dto.EducationDto;
+import jakarta.persistence.Column;
+import lombok.Builder;
+
+import java.util.List;
+
+@Builder
+public record BookPageResponseDto(
+        Long bookPageId,
+        String bookImagePath,
+        int page,
+        String content,
+        @Column(name = "sentence")
+        List<BookPageSentenceDto> bookPageSentences,
+        EducationDto education
+) {
+
+}

@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c5b2a1292fdf5872e2dab1720705f942e12584068932d0a8848b01570113268c
-size 816
+package com.ssafy.backend.domain.education.repository.actionLearning;
+
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import com.ssafy.backend.domain.education.entity.QActionLearning;
+import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
+@RequiredArgsConstructor
+public class ActionLearningCustomRepositoryImpl implements ActionLearningCustomRepository {
+	private final JPAQueryFactory jpaQueryFactory;
+
+	QActionLearning qActionLearning = QActionLearning.actionLearning;
+
+	@Override
+	public List<String> getActionImageListByUserAndEducation(Long userId, Long educationId) {
+		return jpaQueryFactory
+				.select(
+						qActionLearning.userPath
+				).from(qActionLearning)
+				.where(qActionLearning.user.userId.eq(userId))
+				.where(qActionLearning.education.educationId.eq(educationId))
+				.fetch();
+	}
+}

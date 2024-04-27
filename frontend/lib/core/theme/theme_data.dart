@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:23622f3b40a879c8c430e2834d33143b2776a7fe7a98d61a449577b480aa5041
-size 984
+import 'package:flutter/material.dart';
+
+import 'constant/app_colors.dart';
+import 'custom/custom_font_weight.dart';
+import 'custom/custom_theme.dart';
+
+class CustomThemeData {
+  static ThemeData get themeData => ThemeData(
+    useMaterial3: true,
+    colorScheme: CustomTheme.colorScheme,
+    fontFamily: 'Nanumson_jangmi',
+    textTheme: CustomTheme.textTheme,
+    dividerTheme: DividerThemeData(color: AppColors.primary),
+    tabBarTheme: TabBarTheme(
+      indicator: const UnderlineTabIndicator(
+        borderSide: BorderSide(color: AppColors.primary, width: 2),
+      ),
+      indicatorSize: TabBarIndicatorSize.tab,
+      labelColor: CustomTheme.colorScheme.primary,
+      labelStyle: CustomTheme.textTheme.titleSmall.semiBold,
+      unselectedLabelColor: CustomTheme.colorScheme.contentSecondary,
+      unselectedLabelStyle: CustomTheme.textTheme.titleSmall,
+      overlayColor: MaterialStatePropertyAll<Color>(
+        Colors.grey[300] ?? Colors.grey,
+      ),
+    ),
+  );
+}

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7c76dc1844246449753b0073b4941569db8e99326a4bfe9b7d30f148bb7df1f
-size 527
+import 'package:flutter/material.dart';
+import 'package:frontend/core/theme/constant/app_icons.dart';
+import 'package:frontend/presentation/routes/route_path.dart';
+import 'package:go_router/go_router.dart';
+
+class MyIcon extends StatelessWidget {
+  const MyIcon({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () => context.pushReplacement(RoutePath.myPage),
+      child: Image.asset(AppIcons.my_icon,
+          width: MediaQuery.of(context).size.width * 0.05),
+    );
+  }
+}

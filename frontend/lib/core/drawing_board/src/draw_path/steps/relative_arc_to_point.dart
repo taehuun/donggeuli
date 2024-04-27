@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:975cbe66c042ab06f9bc654205bd719aaa1f4f7362c06ea3c3f1272af070a80f
-size 1064
+import 'dart:ui';
+
+import '../../paint_extension/ex_offset.dart';
+import '../../paint_extension/ex_radius.dart';
+
+import 'operation_step.dart';
+
+class RelativeArcToPoint extends OperationStep {
+  RelativeArcToPoint(
+    this.arcEndDelta,
+    this.radius,
+    this.rotation,
+    this.largeArc,
+    this.clockwise,
+  );
+
+  factory RelativeArcToPoint.fromJson(Map<String, dynamic> data) {
+    return RelativeArcToPoint(
+      jsonToOffset(data['arcEndDelta'] as Map<String, dynamic>),
+      jsonToRadius(data['radius'] as Map<String, dynamic>),
+      data['rotation'] as double,
+      data['largeArc'] as bool,
+      data['clockwise'] as bool,
+    );
+  }
+
+  final Offset arcEndDelta;
+  final Radius radius;
+  final double rotation;
+  final bool largeArc;
+  final bool clockwise;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'type': 'relativeArcToPoint',
+      'arcEndDelta': arcEndDelta.toJson(),
+      'radius': radius.toJson(),
+      'rotation': rotation,
+      'largeArc': largeArc,
+      'clockwise': clockwise,
+    };
+  }
+}

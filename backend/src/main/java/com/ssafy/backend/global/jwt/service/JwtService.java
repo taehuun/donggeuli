@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fb637cb215cefffa1c7c2bf5b68ad77f2409ff419425dd411ebc2aec6f7f0ca2
-size 584
+package com.ssafy.backend.global.jwt.service;
+
+import com.ssafy.backend.domain.user.dto.LoginUserDto;
+import com.ssafy.backend.global.jwt.dto.TokenDto;
+import com.ssafy.backend.global.jwt.dto.UserInfoDto;
+import lombok.NonNull;
+
+public interface JwtService {
+
+	String issueAccessToken(@NonNull UserInfoDto info);
+
+	String issueRefreshToken(Long id);
+
+	TokenDto issueToken(@NonNull UserInfoDto info);
+
+	LoginUserDto parseAccessToken(String accessToken);
+
+	Long parseRefreshToken(String refreshToken);
+
+	void addBlackList(@NonNull String accessToken);
+
+	boolean isBlack(String jwt);
+
+}

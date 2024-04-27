@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2a2c62fa1e65282e71b8dcc3fd629e5165219416b458f7266fef530894158f1
-size 536
+package com.ssafy.backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@EnableJpaAuditing
+@SpringBootApplication
+public class BackendApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BackendApplication.class, args);
+	}
+
+}

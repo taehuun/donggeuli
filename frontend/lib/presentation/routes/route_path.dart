@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74c82d33bd27d9baec2277e6d2967cfee32a2507635cb15c6e9eab6c9c643d94
-size 539
+class RoutePath {
+  /// main_screen
+  static const String main = '/main/:id/:bookId';
+  static const String main0 = '/main/0/0';
+  static const String main1 = '/main/1/0';
+  static const String main2 = '/main/2/0';
+  static const String main3 = '/main/3/:bookId';
+
+  /// splash_page
+  static const String splash = '/splash';
+
+  /// login_page
+  static const String login = '/login';
+
+  ///my_page
+  static const String myPage = '/mypage';
+
+  /// book_progress
+  static const String bookProgress = '/bookProgress/:id/:pageId/:isForward';
+}

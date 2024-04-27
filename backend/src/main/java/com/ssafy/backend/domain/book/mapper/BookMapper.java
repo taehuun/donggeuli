@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d1f1b257ce9a90695a9329bd67070d89804e7168fbc9be513a73caa99919cf46
-size 801
+package com.ssafy.backend.domain.book.mapper;
+
+import com.ssafy.backend.domain.book.dto.BookPageSentenceDto;
+import com.ssafy.backend.domain.book.dto.UserBookProcessDto;
+import com.ssafy.backend.domain.book.entity.BookPageSentence;
+import com.ssafy.backend.domain.book.entity.UserBookProcess;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper(componentModel = "spring")
+public interface BookMapper {
+    BookPageSentenceDto toBookPageSentenceDto(BookPageSentence bookPageSentence);
+
+    @Mapping(source = "userBookProcess.book.bookId", target = "bookId")
+    @Mapping(source = "userBookProcess.book.title", target = "title")
+    @Mapping(source = "userBookProcess.book.coverPath", target = "coverPath")
+    UserBookProcessDto toUserBookProcessDto(UserBookProcess userBookProcess);
+}

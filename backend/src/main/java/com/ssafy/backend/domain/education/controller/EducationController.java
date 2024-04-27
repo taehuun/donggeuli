@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5d03e4e8b612c610747f46814470a69c65c5829b6c2dec19c3be30e15a7b4eea
-size 1166
+package com.ssafy.backend.domain.education.controller;
+
+import com.ssafy.backend.domain.education.dto.request.DrawingDTO;
+import com.ssafy.backend.domain.education.dto.response.EducationResponseDto;
+import com.ssafy.backend.domain.education.service.EducationService;
+import com.ssafy.backend.global.util.AuthenticationUtil;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+@Slf4j
+@RestController
+@RequestMapping("/api/educations")
+@RequiredArgsConstructor
+public class EducationController {
+	private final EducationService educationService;
+
+	@GetMapping("/{educationId}")
+	public ResponseEntity<EducationResponseDto> getEducation(Authentication authentication, @PathVariable Long educationId) {
+		Long userId = AuthenticationUtil.getCurrentUserId(authentication);
+		return ResponseEntity.ok(educationService.getEducation(userId, educationId));
+	}
+
+	@PostMapping("/analyze-drawing")
+	public DrawingDTO getDrawing(@RequestBody DrawingDTO drawingDTO) {
+		//TODO
+		return drawingDTO;
+	}
+}

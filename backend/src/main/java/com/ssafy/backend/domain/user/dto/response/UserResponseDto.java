@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1cfa301204f1b5233c98ec7c54b2ff7f8aec86320b0667299d3ec0285dd54f51
-size 541
+package com.ssafy.backend.domain.user.dto.response;
+
+import com.ssafy.backend.domain.user.entity.User;
+import lombok.Builder;
+
+@Builder
+public record UserResponseDto(
+		String email,
+		String nickname,
+		String role,
+		String profileImage,
+		boolean isOauth
+) {
+	public static UserResponseDto from(User user) {
+		return UserResponseDto.builder()
+				.email(user.getEmail())
+				.nickname(user.getNickname())
+				.role(user.getRole().name())
+				.profileImage(user.getProfileImage())
+				.isOauth(user.getProvider()!=null)
+				.build();
+	}
+}

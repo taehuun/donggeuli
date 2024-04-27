@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc6432fb3c1b919ee639c7e04ce6906ae877b45e08160cf4293b6f95bf9b64ac
-size 658
+import 'package:flutter/material.dart';
+
+String postPositionText(String name) {
+  // Get the last character of the name
+  final String? lastText = name.isNotEmpty ? name.characters.last : null;
+
+  if (lastText == null) {
+    return name;
+  }
+  // Convert to Unicode
+  final int unicodeVal = lastText.runes.first;
+  // Return the name if it's not a Hangul syllable
+  if (unicodeVal < 0xAC00 || unicodeVal > 0xD7A3) {
+    return name;
+  }
+  // Check if there's a final consonant
+  final int last = (unicodeVal - 0xAC00) % 28;
+  // Append '을' if there is a final consonant, otherwise '를'
+  final String str = last > 0 ? "을" : "를";
+  return name + str;
+}

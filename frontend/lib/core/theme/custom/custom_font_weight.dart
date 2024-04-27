@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a7d548b82eff5fc04b71c91ecbf09b6cfa5dd60d4b6938b1a69f60eaf998836e
-size 521
+import 'package:flutter/material.dart';
+
+class CustomFontWeight {
+  static const FontWeight regular = FontWeight.w400;
+  static const FontWeight semiBold = FontWeight.w500;
+  static const FontWeight bold = FontWeight.w700;
+}
+
+extension TextStyleX on TextStyle? {
+  TextStyle? get regular =>
+      this?.copyWith(fontWeight: CustomFontWeight.regular);
+
+  TextStyle? get semiBold =>
+      this?.copyWith(fontWeight: CustomFontWeight.semiBold);
+
+  TextStyle? get bold => this?.copyWith(fontWeight: CustomFontWeight.bold);
+}

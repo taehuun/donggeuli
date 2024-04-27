@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0345966e7bee59f9bbeb0030be01e74f42aa2dd7dca4f278a2c0f5e326f9ed83
-size 592
+/*
+  final BlurStyle _style;
+  final double _sigma;
+
+  @override
+  String toString() => 'MaskFilter.blur($_style, ${_sigma.toStringAsFixed(1)})';
+*/
+
+import 'dart:ui';
+
+import '../helper/ex_enum.dart';
+
+MaskFilter? stringToMaskFilter(String data) {
+  final String style = data.substring(data.indexOf('('), data.indexOf(','));
+  final BlurStyle? blurStyle =
+      ExEnum.tryParse<BlurStyle>(BlurStyle.values, style);
+
+  final double sigma =
+      double.parse(data.substring(data.indexOf(',') + 1, data.indexOf(')')));
+
+  return blurStyle != null ? MaskFilter.blur(blurStyle, sigma) : null;
+}

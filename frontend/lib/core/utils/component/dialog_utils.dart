@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d10cb59e9f000e42695ed0cc374a8cc1d65ceea633acb7039763b437dc1205e
-size 1305
+import 'package:flutter/material.dart';
+
+class DialogUtils {
+  static final DialogUtils _instance = DialogUtils.internal();
+
+  DialogUtils.internal();
+
+  factory DialogUtils() => _instance;
+
+  static Future<String> showCustomDialog(
+    BuildContext context, {
+    required Widget contentWidget,
+  }) async {
+    final result = await showGeneralDialog(
+        context: context,
+        barrierDismissible: true,
+        barrierLabel:
+            MaterialLocalizations.of(context).modalBarrierDismissLabel,
+        barrierColor: Colors.black45,
+        transitionDuration: const Duration(milliseconds: 200),
+        pageBuilder: (BuildContext buildContext, Animation animation,
+            Animation secondaryAnimation) {
+          return Builder(builder: (BuildContext context) {
+            return Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.95,
+                height: MediaQuery.of(context).size.height,
+                padding: const EdgeInsets.all(20),
+                color: Colors.transparent,
+                child: Column(
+                  children: [
+                    contentWidget,
+                  ],
+                ),
+              ),
+            );
+          });
+        });
+    return (result == null) ? "" : "refresh";
+  }
+}
